@@ -1,0 +1,102 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.osa.apiTest</groupId>
+	<artifactId>ApiGroupA</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<dependencies>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>5.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20231013</version>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>5.5.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>5.5.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-core</artifactId>
+			<version>5.5.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.1.0</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>de.monochromata.cucumber</groupId>
+			<artifactId>reporting-plugin</artifactId>
+			<version>4.0.42</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<!--<configuration>
+				 	<source>1.${java.version}</source>
+					<target>1.${java.version}</target>
+					</configuration>-->
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.18.1</version>
+				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<version>.0.0</version>
+				<executions>
+					<execution>
+						<id>execution</id>
+						<phase>verify</phase>
+
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<projectName>cucumber-JVM-Example</projectName>
+							<outputDirectory>${project.build.directory}/target/cucumber-
+								reports</outputDirectory>
+							<cucumberOutput>
+								${project.build.directory}/cucumber.json</cucumberOutput>
+							<skippedFails>true</skippedFails>
+							<enableFlashCharts>false</enableFlashCharts>
+							<buildNumber>42</buildNumber>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>

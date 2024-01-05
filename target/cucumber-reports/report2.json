@@ -1,0 +1,131 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2023-12-23T20:35:28.676Z",
+        "line": 5,
+        "name": "send GET request extracting all students info",
+        "description": "",
+        "id": "call-all-requests-with-api-restassured;send-get-request-extracting-all-students-info",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1228187100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I have sent baseURI and authentication",
+            "match": {
+              "location": "com.osa.steps.AllRequestsApi.i_have_sent_baseURI_and_authentication()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1846175700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I send get request using \"/students\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/students\"",
+                  "offset": 25
+                }
+              ],
+              "location": "com.osa.steps.AllRequestsApi.i_send_get_request_using(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 281883100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "i delete a \"/students/6563634ca10a1e0fc60968c0\" id",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/students/6563634ca10a1e0fc60968c0\"",
+                  "offset": 11
+                }
+              ],
+              "location": "com.osa.steps.AllRequestsApi.i_delete_a_id(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-12-23T20:35:32.063Z",
+        "line": 13,
+        "name": "send POST request for adding student info",
+        "description": "",
+        "id": "call-all-requests-with-api-restassured;send-post-request-for-adding-student-info",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3002100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I have sent baseURI and authentication",
+            "match": {
+              "location": "com.osa.steps.AllRequestsApi.i_have_sent_baseURI_and_authentication()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1469827900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I send post request",
+            "match": {
+              "location": "com.osa.steps.AllRequestsApi.i_send_post_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 585869500,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I verified the student ID with get request",
+            "match": {
+              "location": "com.osa.steps.AllRequestsApi.i_verified_the_student_ID_with_get_request()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 255573300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I send a patch request updating student info",
+            "match": {
+              "location": "com.osa.steps.AllRequestsApi.i_send_a_patch_request_updating_student_info()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Call all requests with API RestAssured",
+    "description": "",
+    "id": "call-all-requests-with-api-restassured",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/com/osa/features/AllRequests.feature",
+    "tags": []
+  }
+]

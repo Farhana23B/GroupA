@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="2.636">
+    <testcase classname="Call all requests with API RestAssured" name="send GET request extracting all students info" time="2.527">
+        <system-out><![CDATA[Given I have sent baseURI and authentication................................passed
+When I send GET request using "/students"...................................passed
+And I validated with status code............................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
